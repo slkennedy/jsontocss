@@ -1,0 +1,19 @@
+{
+  "name": "jsontocss",
+  "version": "1.0.0",
+  "description": "Takes JSON object of framework components and outputs CSS selectors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slkennedy/jsontocss.git"
+  },
+  "author": "Sara Kennedy <slkennedy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slkennedy/jsontocss/issues"
+  },
+  "homepage": "https://github.com/slkennedy/jsontocss#readme"
+}
