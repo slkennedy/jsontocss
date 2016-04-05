@@ -1,1 +1,1 @@
-#JSON to CSS Selectors
+#JSON to SCSS Selectors
