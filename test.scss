@@ -1,6 +1,6 @@
-&__ux-link-panel {
+.ux-link-panel {
 
-    &--special {
+            &--special {
 
 }
 &--horizontal {
@@ -10,50 +10,57 @@
 
 }
 
-    &__heading {
+            &__heading {
 
-    &--uppercase {
+            &--uppercase {
 
 }
 
-    
+            
+
 }
 &__description {
 
-    &--note {
+            &--note {
 
 }
 &--important {
 
 }
 
-    
+            
+
 }
 &__items {
 
-    
-    &__item {
+            
+            &__item {
 
-    &--external {
-
-}
-
-    &__icon {
-
-    &--small {
+            &--external {
 
 }
 
-    
+            &__icon {
+
+            &--small {
+
+}
+
+            
+
 }
 &__link {
 
-    
-    
-}
+            
+            
 
 }
 
+
 }
+
+
+}
+
 
 }

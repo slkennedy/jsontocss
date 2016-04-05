@@ -33,7 +33,7 @@ let data = {
     ]
 };
 
-//need place to put all the outputs
+//creates file to put outputs in
 fs.writeFile("test.scss", "", (err) => {
     if (err) {
         return console.log(err);
@@ -62,10 +62,12 @@ function renderElements(elements) {
 }
 
 //render selector for main component/element
-function renderElement(element) {
+function renderElement(element, prefix) {
     let scssModifiers = "",
-        scssElements = "",
-        scssElement = "";
+        scssElements  = "",
+        scssElement   = "";
+
+    prefix = prefix || "&__";
 
     if(element.modifiers) {
         scssModifiers = renderModifiers(element.modifiers);
@@ -75,10 +77,11 @@ function renderElement(element) {
         scssElements = renderElements(element.elements);
     }
 
-    scssElement = `&__${element.name} {
+    scssElement = `${prefix}${element.name} {
 
-    ${scssModifiers}
-    ${scssElements}
+            ${scssModifiers}
+            ${scssElements}
+
 }`;
 
     return scssElement;
@@ -95,7 +98,7 @@ function renderModifiers(modifiers) {
     return scssModifiers;
 }
 
-//render selector for each modifier
+//return selector for each modifier
 function renderModifier(modifier) {
     let scssModifier = `&--${modifier} {
 
@@ -103,16 +106,13 @@ function renderModifier(modifier) {
     return scssModifier;
 }
 
-//loop through array of children
-function renderChildren(children) {
-    elements.forEach(function(child) {
+// function formatScss(strings, values) {
+//     console.log(strings);
+//     console.log("Values here " + values);
+// }
+//
+// formatScss`testing how this thing works
+// newline here
+// newline and expression ${ 2+2 }`;
 
-    });
-}
-
-
-
-
-
-
-appendScss(renderElement(data));
+appendScss(renderElement(data, "."));
